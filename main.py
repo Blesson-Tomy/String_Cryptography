@@ -1,42 +1,54 @@
 import streamlit as st
 
 encrypt = {
-    "a": "m",
-    "b": "n",
-    "c": "b",
-    "d": "v",
-    "e": "c",
-    "f": "x",
-    "g": "z",
-    "h": "j",
-    "i": "l",
-    "j": "h",
-    "k": "k",
-    "l": "i",
-    "m": "a",
-    "n": "b",
-    "o": "p",
-    "p": "o",
-    "q": "y",
-    "r": "f",
-    "s": "z",
-    "t": "r",
-    "u": "w",
-    "v": "d",
-    "w": "u",
-    "x": "f",
-    "y": "q",
-    "z": "s",
+    "a": "z",
+    "b": "y",
+    "c": "x",
+    "d": "w",
+    "e": "v",
+    "f": "u",
+    "g": "t",
+    "h": "s",
+    "i": "r",
+    "j": "q",
+    "k": "p",
+    "l": "o",
+    "m": "n",
+    "n": "m",
+    "o": "l",
+    "p": "k",
+    "q": "j",
+    "r": "i",
+    "s": "h",
+    "t": "g",
+    "u": "f",
+    "v": "e",
+    "w": "d",
+    "x": "c",
+    "y": "b",
+    "z": "a",
 }
 
 st.set_page_config(page_title="Cryptography", page_icon="🔐", layout="wide")
 st.title("Cryptography")
 st.write("This is a simple web app that allows you to encrypt and decrypt text.")
-op=st.text_area("Enter the text you would like to encrypt here:", height=200)
+op=st.text_area("Enter the text you would like to encrypt here:", height=10)
 
-leng=len(op)
-for i in range: leng
-    if 
+op=op.lower()
+length=len(op)
+encrypted = ''
+if st.button("Encrypt"):
+    for char in op:
+        
+        if char in encrypt:
+            encrypted = encrypted + encrypt[char]
+        else:
+            encrypted = encrypted + char
+         
+    st.write("The encrypted code is: "+encrypted)
+    st.write("ENCRYPTION COMPLETE")
+
+
     
     
     
