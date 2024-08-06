@@ -47,13 +47,3 @@ if st.button("Encrypt"):
          
     st.write("The encrypted code is: "+encrypted)
     st.write("ENCRYPTION COMPLETE")
-
-
-    
-    
-    
-    
-
-
-#st.text_area("Enter the text you would like to decrypt here:", height=200)
-
